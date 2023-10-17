@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 function UserPage() {
   return (
     <div>
-      <h1>User Page</h1>
-      {/* Add your user-related content here */}
-      <Link to="/payment">Payment Page</Link>
-      <Link to="/login">Back to Login</Link>
+      <h1>Welcome to the User Page</h1>
+      <Link to="/payment">
+        <button>Go to Payment Page</button>
+      </Link>
+      <Link to="/login">
+        <button>Back to Login Page</button>
+      </Link>
     </div>
   );
 }
