@@ -1,8 +1,9 @@
+/*The payment confirmation page*/
+
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import PaymentContext from '../PaymentContext';
 import './ConfirmationPage.css';
-
 
 function ConfirmationPage() {
   const { paymentData } = useContext(PaymentContext);
@@ -28,7 +29,6 @@ function ConfirmationPage() {
         </Link>
       </div>
       <footer>
-          {/* Any footer content if needed */}
       </footer>
     </div>
   );

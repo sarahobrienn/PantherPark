@@ -1,3 +1,5 @@
+/*The home page*/
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +18,6 @@ function HomePage() {
           </Link>
       </div>
       <footer>
-          {/* Any footer content if needed */}
       </footer>
     </div>
   );
