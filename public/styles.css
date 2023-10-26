@@ -1,9 +1,9 @@
-html, body {
+html, body { /*added this for margin of body*/
     height: 100%;
     margin: 0;
 }
 
-.container {
+.container { /*the main part of the class*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,25 +12,21 @@ html, body {
     padding: 10px;
 }
 
-
-
-.page-title {
+.page-title { /*Panther Park title*/
     flex-grow: 1; 
     flex-shrink: 1; 
     margin: 5px 0; /* Reduced top and bottom margin */
 }
 
 
-header {
+header { /*Header*/
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;  /* Reduced space between logo and title */
 }
 
-
-
-.content {
+.content { /*Content inside of body*/
     display: flex;
     flex-direction: row;
     justify-content: center; /* Horizontally centers content */
@@ -39,9 +35,7 @@ header {
     flex-wrap: wrap; 
 }
 
-
-
-.button {
+.button { /*Universal Button Style*/
     width: 200px; 
     height: 100px;
     display: flex; 
@@ -52,8 +46,8 @@ header {
     border-radius: 15px;
 }
 
-.login-form {
-    width: 300px; /* Adjust to your desired width */
+.login-form { /*How the Login box looks*/
+    width: 300px; 
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -67,21 +61,20 @@ header {
 }
 
 
-.input-field {
-    width: 100%; /* Takes the full width of its parent, the .payment-form */
+.input-field { /*Input field style*/
+    width: 100%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem; /* Adjust font size for better readability */
+    font-size: 1rem; 
 }
 
-
-a {
+a { /*This is so the links to the pages are not underlined*/
     text-decoration: none;
 }
 
-.payment-form {
-    width: 300px; /* Adjust to your desired width */
+.payment-form { /*The itemized recipt form style*/
+    width: 300px; 
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -89,12 +82,12 @@ a {
     align-items: center;
     border: 2px solid #ccc; /* Border color */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Optional: A subtle shadow to give depth */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
     background-color: #f2f2f2; /* Gray background color */
     gap: 15px; /* Space between elements inside the form */
 }
 
-.receipt-box {
+.receipt-box { /*The box style of the itemized recipt*/
     width: 300px;
     padding: 20px;
     display: flex;
