@@ -1,0 +1,23 @@
+/* Loginpage.css */
+.loginpage-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Style the link buttons */
+  .link-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .link-button:hover {
+    background-color: #0056b3;
+  }
+  
