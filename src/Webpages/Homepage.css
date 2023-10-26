@@ -21,3 +21,7 @@
     background-color: #0056b3;
   }
   
+  .page-title {
+    flex-grow: 1; /* allow it to grow */
+    flex-shrink: 1; /* allow it to shrink */
+}
