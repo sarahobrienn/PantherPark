@@ -1,3 +1,4 @@
+/*User page with information about the student*/
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +19,6 @@ function UserPage() {
           </Link>
       </div>
       <footer>
-          {/* Any footer content if needed */}
       </footer>
     </div>
   );
