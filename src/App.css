@@ -86,7 +86,7 @@ header h1, footer h1 {
   min-height: 100vh; /* ensure it takes up the full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center vertically */
+  justify-content: space-between; /* distribute space between items */
   align-items: center; /* center horizontally */
 }
 
@@ -94,4 +94,12 @@ header h1, footer h1 {
 html, body {
   height: 100%;
   margin: 0;
+}
+
+.centered-content {
+  display: flex;
+  flex-grow: 1; /* This allows the container to grow and take up available space */
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
 }
