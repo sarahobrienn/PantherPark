@@ -1,0 +1,102 @@
+html, body { /*added this for margin of body*/
+    height: 100%;
+    margin: 0;
+}
+
+.container { /*the main part of the class*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will center the content vertically */
+    align-items: center; /* This will center the content horizontally */
+    padding: 10px;
+}
+
+.page-title { /*Panther Park title*/
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    margin: 5px 0; /* Reduced top and bottom margin */
+}
+
+
+header { /*Header*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;  /* Reduced space between logo and title */
+}
+
+.content { /*Content inside of body*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.button { /*Universal Button Style*/
+    width: 200px; 
+    height: 100px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.25rem; 
+    margin: 20px;  /* Reduced margin for spacing */
+    border-radius: 15px;
+}
+
+.login-form { /*How the Login box looks*/
+    width: 300px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Optional: A subtle shadow to give depth */
+    background-color: #f2f2f2; /* Gray background color */
+    gap: 15px; /* Space between elements inside the form */
+}
+
+
+.input-field { /*Input field style*/
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; 
+}
+
+a { /*This is so the links to the pages are not underlined*/
+    text-decoration: none;
+}
+
+.payment-form { /*The itemized recipt form style*/
+    width: 300px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
+    background-color: #f2f2f2; /* Gray background color */
+    gap: 15px; /* Space between elements inside the form */
+}
+
+.receipt-box { /*The box style of the itemized recipt*/
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    gap: 15px;
+}
