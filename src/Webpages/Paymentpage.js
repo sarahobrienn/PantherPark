@@ -71,8 +71,8 @@ function PaymentPage() {
         <button className="button" onClick={handlePayment}>Make Payment</button>
       </div>
       <div className="content">
-        <Link to="/user">
-          <button className="button">Back to User Page</button>
+        <Link to="/login">
+          <button className="button">Back to Login Page</button>
         </Link>
         <Link to="/">
           <button className="button">Back to Home</button>

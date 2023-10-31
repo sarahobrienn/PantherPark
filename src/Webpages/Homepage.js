@@ -9,8 +9,8 @@ function HomePage() {
       <header>
       <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
           <h1>Panther Park</h1>
-      </header>
       <h2 className="page-title">Welcome to the Home Page</h2>
+      </header>
       <img src="/gsu parking.png" alt="Parking Map" width="500" />
       <div className="content">
           <Link to="/login">

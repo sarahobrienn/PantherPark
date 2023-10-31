@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function LoginPage() {
-  // State to hold the user's input
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState(''); // Not used for display, but captured for completeness
+  const [password, setPassword] = useState(''); // State for password
 
   return (
     <div className="container">
       <header>
         <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
         <h1>Panther Park</h1>
-      </header>
       <h2 className="page-title">Welcome to the Login Page</h2>
+      </header>
       <p>*Must login with valid GSU credentials*</p>
       <div className="login-form">
         <input 
@@ -34,11 +33,11 @@ function LoginPage() {
         </Link>
       </div>
       <div className="content">
-        <Link to="/payment">
-          <button className="button">Go to Payment Page</button>
-        </Link>
         <Link to="/">
           <button className="button">Back to Home</button>
+        </Link>
+        <Link to="/decks-public"> 
+          <button className="button">View Parking Decks</button>
         </Link>
       </div>
       <footer>
