@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+function generateRandomCount() {
+  return Math.floor(Math.random() * 251); // Generates a random number between 0 and 250
+}
+
 function ParkingDeckPagePublic() {
   // Include count data for each deck
   const decks = [
-    { name: 'Deck T', count: 0 },
-    { name: 'Deck G', count: 0 },
-    { name: 'Deck N', count: 0 }
+    { name: 'Deck T', count: generateRandomCount() },
+    { name: 'Deck G', count: generateRandomCount() },
+    { name: 'Deck N', count: generateRandomCount() }
   ];
 
   return (

@@ -1,38 +1,38 @@
 // ParkingDeckPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './ParkingDeckPage.css';
+
+function generateRandomCount() {
+  return Math.floor(Math.random() * 251); // Generates a random number between 0 and 250
+}
 
 function ParkingDeckPage() {
-  const [decks, setDecks] = useState([
-    { name: 'Deck T', count: 0 },
-    { name: 'Deck G', count: 0 },
-    { name: 'Deck N', count: 0 }
-  ]);
+  const initialDecks = [
+    { name: 'Deck T', count: generateRandomCount() },
+    { name: 'Deck G', count: generateRandomCount() },
+    { name: 'Deck N', count: generateRandomCount() }
+  ];
 
+  const [decks, setDecks] = useState(JSON.parse(localStorage.getItem('decks')) || initialDecks);
   const [selectedFloor, setSelectedFloor] = useState('1');
-
   const navigate = useNavigate();
 
-  const incrementCount = (deckName) => {
-    setDecks(decks.map(deck => 
-      deck.name === deckName ? { ...deck, count: deck.count + 1 } : deck
-    ));
-  };
+  useEffect(() => {
+    localStorage.setItem('decks', JSON.stringify(decks));
+  }, [decks]);
 
-  const decrementCount = (deckName) => {
-    setDecks(decks.map(deck => 
-      deck.name === deckName && deck.count > 0 ? { ...deck, count: deck.count - 1 } : deck
-    ));
+  const incrementCount = (deckName) => {
+    const updatedDecks = decks.map(deck =>
+      deck.name === deckName ? { ...deck, count: deck.count + 1 } : deck
+    );
+    setDecks(updatedDecks);
   };
 
   const recordParking = (deckName) => {
     incrementCount(deckName);
-    navigate('/user', {
-      state: {
-        deck: deckName,
-        floor: selectedFloor
-      }
-    });
+    localStorage.setItem('parkingInfo', JSON.stringify({ deck: deckName, floor: selectedFloor }));
+    navigate('/user');
   };
 
   return (
@@ -52,7 +52,6 @@ function ParkingDeckPage() {
             ))}
           </select>
           <button onClick={() => recordParking(deck.name)}>I Parked Here</button>
-          <button onClick={() => decrementCount(deck.name)}>I Left Here</button>
         </div>
       ))}
       <div className="navigation-buttons">
