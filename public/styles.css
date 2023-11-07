@@ -1,7 +1,7 @@
 html, body { /*added this for margin of body*/
     height: 100%;
     margin: 0;
-    background-color: #0039a6; /*GSU blue color*/
+    background-color: #b1cbff; /*GSU blue color*/
 }
 
 .container { /*the main part of the class*/

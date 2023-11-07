@@ -1,4 +1,4 @@
-/*The payment confirmation page*/
+/* The payment confirmation page */
 
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,8 @@ import './ConfirmationPage.css';
 
 function ConfirmationPage() {
   const { paymentData } = useContext(PaymentContext);
+  // Retrieve parking information from localStorage
+  const parkingInfo = JSON.parse(localStorage.getItem('parkingInfo')) || { deck: 'N/A', floor: 'N/A' };
 
   return (
     <div className="container">
@@ -22,6 +24,9 @@ function ConfirmationPage() {
         <p>Cardholder Name: {paymentData.cardName}</p>
         <p>Expiration Date: {paymentData.expDate}</p>
         <p>Zip Code: {paymentData.zipCode}</p>
+        {/* Add parking information */}
+        <p>Parking Deck: {parkingInfo.deck}</p>
+        <p>Parking Floor: {parkingInfo.floor}</p>
       </div>
       <div className="content">
         <Link to="/user">
