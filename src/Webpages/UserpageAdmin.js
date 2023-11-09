@@ -1,8 +1,8 @@
 // UserPage.js
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
-import './Userpage.css';
-function UserPage() {
+import './UserpageAdmin.css';
+function UserpageAdmin() {
   const [parkingInfo, setParkingInfo] = useState({ deck: 'N/A', floor: 'N/A' });
   const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ function UserPage() {
         <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
         <h1>Panther Park</h1>
       </header>
-      <h2 className="page-title">Welcome, User!</h2>
+      <h2 className="page-title">Welcome, Admin!</h2>
       <p>Floor Parked: {parkingInfo.floor}</p>
       <p>Deck Parked: {parkingInfo.deck}</p>
       {parkingInfo.deck !== 'N/A' && (
@@ -50,7 +50,7 @@ function UserPage() {
         <Link to="/payment">
           <button className="button">Go to Payment Page</button>
         </Link>
-        <Link to="/decks">
+        <Link to="/decks-admin">
           <button className="button">Record Parking Spot</button>
         </Link>
         <Link to="/notifications">
@@ -69,4 +69,4 @@ function UserPage() {
   );
 }
 
-export default UserPage;
+export default UserpageAdmin;
