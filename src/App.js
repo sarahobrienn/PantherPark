@@ -8,6 +8,8 @@ import ConfirmationPage from './Webpages/ConfirmationPage';
 import ParkingDeckPage from './Webpages/ParkingDeckPage'; // Import the ParkingDeckPage
 import ParkingDeckPagePublic from './Webpages/ParkingDeckPagePublic'; // Import the ParkingDeckPagePublic
 import PaymentContext from './PaymentContext';
+import StudentLogin from './Webpages/StudentLogin';
+import AdminLogin from './Webpages/AdminLogin';
 
 function App() {
   const [paymentData, setPaymentData] = React.useState({});
@@ -20,6 +22,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/user" element={<UserPage />} />
+          <Route path="/student-login" element={<StudentLogin />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/decks" element={<ParkingDeckPage />} /> {/* Route for ParkingDeckPage */}
           <Route path="/decks-public" element={<ParkingDeckPagePublic />} /> {/* Route for ParkingDeckPagePublic */}
           <Route path="/confirmation" element={<ConfirmationPage />} />

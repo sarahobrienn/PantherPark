@@ -2,34 +2,20 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function LoginPage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState(''); // State for password
-
-  return (
+return (
     <div className="container">
       <header>
         <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
         <h1>Panther Park</h1>
-      <h2 className="page-title">Welcome to the Login Page</h2>
+      <h2 className="page-title">Welcome to the User Selection Page</h2>
       </header>
-      <p>*Must login with valid GSU credentials*</p>
-      <div className="login-form">
-        <input 
-          type="text" 
-          placeholder="Username" 
-          className="input-field" 
-          value={username} 
-          onChange={e => setUsername(e.target.value)} 
-        />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          className="input-field" 
-          value={password} 
-          onChange={e => setPassword(e.target.value)} 
-        />
-        <Link to={{ pathname: "/user", state: { username: username } }}>
-          <button className="button">Login</button>
+      <p>Please Select Login User Type</p>
+      <div className="content">
+        <Link to="/student-login">
+          <button className="button">Student Login</button>
+        </Link>
+        <Link to="/admin-login">
+          <button className="button">Admin Login</button>
         </Link>
       </div>
       <div className="content">
