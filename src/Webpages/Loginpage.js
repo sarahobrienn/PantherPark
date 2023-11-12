@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function LoginPage() {
-return (
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState(''); // State for password
+
+  return (
     <div className="container">
       <header>
         <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
         <h1>Panther Park</h1>
-      <h2 className="page-title">Welcome to the User Selection Page</h2>
+      <h2 className="page-title">Welcome to the Login Page</h2>
       </header>
       <p>*Must login with valid GSU credentials*</p>
       <div className="login-form">
