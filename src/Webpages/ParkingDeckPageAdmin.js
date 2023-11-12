@@ -1,20 +1,22 @@
 // ParkingDeckPage.js
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './ParkingDeckPage.css';
+import './ParkingDeckPageAdmin.css';
 
 function generateRandomCount() {
   return Math.floor(Math.random() * 251); // Generates a random number between 0 and 250
 }
 
-function ParkingDeckPage() {
-  const initialDecks = [
-    { name: 'Deck T', count: generateRandomCount() },
-    { name: 'Deck G', count: generateRandomCount() },
-    { name: 'Deck N', count: generateRandomCount() }
+function ParkingDeckPageAdmin() {
+  const adminDecks = [
+    { name: 'B Lot', count: generateRandomCount() },
+    { name: 'J Deck', count: generateRandomCount() },
+    { name: 'S Deck', count: generateRandomCount() },
+    { name: 'U Lot', count: generateRandomCount() },
+    { name: 'W Lot', count: generateRandomCount() },
   ];
 
-  const [decks, setDecks] = useState(JSON.parse(localStorage.getItem('decks')) || initialDecks);
+  const [decks, setDecks] = useState(JSON.parse(localStorage.getItem('decks')) || adminDecks);
   const [selectedFloor, setSelectedFloor] = useState('1');
   const navigate = useNavigate();
 
@@ -32,7 +34,7 @@ function ParkingDeckPage() {
   const recordParking = (deckName) => {
     incrementCount(deckName);
     localStorage.setItem('parkingInfo', JSON.stringify({ deck: deckName, floor: selectedFloor }));
-    navigate('/user');
+    navigate('/user-admin');
   };
 
   return (
@@ -56,7 +58,7 @@ function ParkingDeckPage() {
       ))}
       <div className="navigation-buttons">
         <div className="content">
-          <Link to="/user">
+          <Link to="/user-admin">
             <button className="button">Back</button>
           </Link>
           <Link to="/">
@@ -68,4 +70,4 @@ function ParkingDeckPage() {
   );
 }
 
-export default ParkingDeckPage;
+export default ParkingDeckPageAdmin;

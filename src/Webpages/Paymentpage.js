@@ -72,7 +72,7 @@ function PaymentPage() {
       </div>
       <div className="content">
         <Link to="/login">
-          <button className="button">Back to Login Page</button>
+          <button className="button">Back</button>
         </Link>
         <Link to="/">
           <button className="button">Back to Home</button>

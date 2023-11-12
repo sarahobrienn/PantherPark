@@ -9,13 +9,29 @@ return (
         <h1>Panther Park</h1>
       <h2 className="page-title">Welcome to the User Selection Page</h2>
       </header>
-      <p>Please Select Login User Type</p>
-      <div className="content">
-        <Link to="/student-login">
-          <button className="button">Student Login</button>
+      <p>*Must login with valid GSU credentials*</p>
+      <div className="login-form">
+        <input 
+          type="text" 
+          placeholder="Username" 
+          className="input-field" 
+          value={username} 
+          onChange={e => setUsername(e.target.value)} 
+        />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          className="input-field" 
+          value={password} 
+          onChange={e => setPassword(e.target.value)} 
+        />
+        <Link to={{ pathname: "/user", state: { username: username } }}>
+        <Link to="/user">
+          <button className="button">Login Student</button>
         </Link>
-        <Link to="/admin-login">
-          <button className="button">Admin Login</button>
+        <Link to="/user-admin">
+          <button className="button">Login Admin</button>
+        </Link>
         </Link>
       </div>
       <div className="content">
