@@ -25,8 +25,6 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/user" element={<UserPage />} />
-          <Route path="/student-login" element={<StudentLogin />} />
-          <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/decks" element={<ParkingDeckPage />} /> {/* Route for ParkingDeckPage */}
           <Route path="/decks-public" element={<ParkingDeckPagePublic />} /> {/* Route for ParkingDeckPagePublic */}
           <Route path="/confirmation" element={<ConfirmationPage />} />
