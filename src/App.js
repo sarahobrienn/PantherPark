@@ -12,10 +12,11 @@ import Notificationpage from './Webpages/Notificationpage';
 import VehicleRegistration from './Webpages/VehicleRegistration';
 import UserpageAdmin from './Webpages/UserpageAdmin';
 import ParkingDeckPageAdmin from './Webpages/ParkingDeckPageAdmin';
-
+import {getUsers} from './api/supabase_connection';
 
 function App() {
   const [paymentData, setPaymentData] = React.useState({});
+getUsers() 
 
   return (
     <PaymentContext.Provider value={{ paymentData, setPaymentData }}>
