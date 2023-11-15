@@ -59,8 +59,8 @@ function UserpageAdmin() {
         <Link to="/vehicle-registration">
           <button className="button"> Register Your Vehicle</button>
         </Link>
-        <Link to="/databasepage">
-         <button className="button">Database Page</button>
+        <Link to="/database">
+         <button className="button">Access DataBase</button>
         </Link>
       </div>
       <div className="centered-content">
