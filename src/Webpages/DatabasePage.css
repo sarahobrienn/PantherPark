@@ -1,4 +1,11 @@
-.userpage-container {
-    text-align: center;
-    padding: 20px;
-  }
+/* DatabasePage.css */
+.database-container {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.page-title {
+  color: #007BFF;
+}
