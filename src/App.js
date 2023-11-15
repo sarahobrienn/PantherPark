@@ -35,7 +35,6 @@ getUsers()
           <Route path="/user-admin" element={<UserpageAdmin />} />
           <Route path="/database" element={<DataBase />} />
           <Route path="/decks-admin" element={<ParkingDeckPageAdmin />} />
-          <Route path="/database" element={<DatabasePage />} />
         </Routes>
       </Router>
     </PaymentContext.Provider>
