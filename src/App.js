@@ -12,6 +12,7 @@ import Notificationpage from './Webpages/Notificationpage';
 import VehicleRegistration from './Webpages/VehicleRegistration';
 import UserpageAdmin from './Webpages/UserpageAdmin';
 import ParkingDeckPageAdmin from './Webpages/ParkingDeckPageAdmin';
+import DatabasePage from '.webpages/DatabasePage';
 import {getUsers} from './api/supabase_connection';
 
 function App() {
@@ -33,6 +34,7 @@ getUsers()
           <Route path="/vehicle-registration" element={<VehicleRegistration />} />
           <Route path="/user-admin" element={<UserpageAdmin />} />
           <Route path="/decks-admin" element={<ParkingDeckPageAdmin />} />
+          <Route path="/database" element={<DatabasePage />} />
         </Routes>
       </Router>
     </PaymentContext.Provider>
