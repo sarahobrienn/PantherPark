@@ -12,7 +12,6 @@ function DataBase() {
       </header>
 
       <h2>Database Page</h2>
-      {/* Your database-related content goes here */}
 
       <div className="navigation-buttons">
         <div className="content">
@@ -22,6 +21,13 @@ function DataBase() {
           <Link to="/">
             <button className="button">Return to Home</button>
           </Link>
+
+          {/* Use the embed tag with Supabase link */}
+          <iframe
+            src="https://supabase.com/dashboard/sign-in?returnTo=%2Fprojects"
+            type="text/html"
+            style={{ width: '100%', height: '600px' }}
+          />
         </div>
       </div>
     </div>
@@ -29,3 +35,4 @@ function DataBase() {
 }
 
 export default DataBase;
+
