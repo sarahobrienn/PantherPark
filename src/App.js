@@ -13,7 +13,7 @@ import VehicleRegistration from './Webpages/VehicleRegistration';
 import UserpageAdmin from './Webpages/UserpageAdmin';
 import ParkingDeckPageAdmin from './Webpages/ParkingDeckPageAdmin';
 import DataBase from './Webpages/DataBase';
-import { getUsers } from './api/supabase_connection';
+import {getUsers} from './api/supabase_connection';
 
 function App() {
   const [paymentData, setPaymentData] = useState({});
@@ -45,6 +45,7 @@ function App() {
           <Route path="/vehicle-registration" element={<VehicleRegistration />} />
           <Route path="/user-admin" element={<UserpageAdmin />} />
           <Route path="/database" element={<DataBase />} />
+          <Route path="/user-registration" element={<UserRegistration />} />
           <Route path="/decks-admin" element={<ParkingDeckPageAdmin />} />
         </Routes>
       </Router>

@@ -46,8 +46,14 @@ function LoginPage() {
           value={password} 
           onChange={e => setPassword(e.target.value)} 
         />
-        <button className="button" onClick={handleLoginStudent}>Login as Student</button>
-        <button className="button" onClick={handleLoginAdmin}>Login as Admin</button>
+        <Link to={{ pathname: "/user", state: { username: username } }}>
+        <Link to="/user">
+          <button className="button">Login Student</button>
+        </Link>
+        <Link to="/user-admin">
+          <button className="button">Login Admin</button>
+        </Link>
+        </Link>
       </div>
       <div className="content">
         <button className="button" onClick={() => navigate('/')}>Back to Home</button>
