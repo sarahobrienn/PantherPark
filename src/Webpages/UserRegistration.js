@@ -1,7 +1,7 @@
 // UserRegistration.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './UserRegistration.css'; // Import UserRegistration.css instead of VehicleRegistration.css
+import './UserRegistration.css';
 
 function UserRegistration() {
   const userTypes = ["Student", "Admin"];
@@ -35,50 +35,50 @@ function UserRegistration() {
   };
 
   return (
-    <div className="container">
-      <header>
-        <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
-        <h1>Panther Park</h1>
-      </header>
+    <div className="registration-container">
+      <div className="registration-box">
+        <h2>User Registration</h2>
 
-      <h2>User Registration</h2>
-      <h3>Name</h3>
-      <input
-        type="text"
-        id="name"
-        placeholder="Your Name"
-        value={name}
-        onChange={nameChange}
-      ></input>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={nameChange}
+          />
+        </label>
 
-      <h3>Username (Email)</h3>
-      <input
-        type="email"
-        id="username"
-        placeholder="Your Email"
-        value={username}
-        onChange={usernameChange}
-      ></input>
+        <label>
+          Username (Email):
+          <input
+            type="email"
+            value={username}
+            onChange={usernameChange}
+          />
+        </label>
 
-      <h3>Password</h3>
-      <input
-        type="password"
-        id="password"
-        placeholder="Your Password"
-        value={password}
-        onChange={passwordChange}
-      ></input>
+        <label>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={passwordChange}
+          />
+        </label>
 
-      <h3>User Type</h3>
-      <select value={userType} onChange={userTypeChange}>
-        {userTypes.map((type) => (
-          <option key={type} value={type}>
-            {type}
-          </option>
-        ))}
-      </select>
+        <label>
+          Type:
+          <select value={userType} onChange={userTypeChange}>
+            {userTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </label>
 
-      <button onClick={registerUser}>Register User</button>
+        <button onClick={registerUser}>Register User</button>
+      </div>
 
       <div className="navigation-buttons">
         <div className="content">
