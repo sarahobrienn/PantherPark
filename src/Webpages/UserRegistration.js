@@ -31,7 +31,7 @@ function UserRegistration() {
   const registerUser = () => {
     // Add logic to handle user registration (e.g., API call, etc.)
     // For now, let's just navigate to the user page
-    navigate("/user");
+    navigate("/login");
   };
 
   return (
@@ -39,36 +39,39 @@ function UserRegistration() {
       <div className="registration-box">
         <h2>User Registration</h2>
 
-        <label>
+        <label htmlFor="name">
           Name:
           <input
             type="text"
+            id="name"
             value={name}
             onChange={nameChange}
           />
         </label>
 
-        <label>
+        <label htmlFor="username">
           Username (Email):
           <input
             type="email"
+            id="username"
             value={username}
             onChange={usernameChange}
           />
         </label>
 
-        <label>
+        <label htmlFor="password">
           Password:
           <input
             type="password"
+            id="password"
             value={password}
             onChange={passwordChange}
           />
         </label>
 
-        <label>
-          Type:
-          <select value={userType} onChange={userTypeChange}>
+        <label htmlFor="userType">
+          User Type:
+          <select id="userType" value={userType} onChange={userTypeChange}>
             {userTypes.map((type) => (
               <option key={type} value={type}>
                 {type}

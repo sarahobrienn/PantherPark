@@ -29,6 +29,9 @@ function LoginPage() {
           onChange={e => setPassword(e.target.value)} 
         />
         <Link to={{ pathname: "/user", state: { username: username } }}>
+        <Link to="/user-registration">
+          <button className="button small-button">New User? Register Here</button>
+        </Link>
         <Link to="/user">
           <button className="button">Login Student</button>
         </Link>

@@ -1,53 +1,51 @@
 /* UserRegistration.css */
 .registration-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .registration-box {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-  
-  /* Style the buttons */
-  .button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style the link buttons */
-  .link-button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .link-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .page-title {
-    margin-top: 0;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.registration-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
