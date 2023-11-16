@@ -34,6 +34,10 @@ function UserRegistration() {
     navigate("/login");
   };
 
+  const goToCampusId = () => {
+    window.location.href = "https://campusid.gsu.edu/sspr/private/login";
+  };
+
   return (
     <div className="registration-container">
       <div className="registration-box">
@@ -81,6 +85,9 @@ function UserRegistration() {
         </label>
 
         <button onClick={registerUser}>Register User</button>
+
+        {/* Add the new button to go to the specified website */}
+        <button onClick={goToCampusId}>Go to Campus ID</button>
       </div>
 
       <div className="navigation-buttons">
@@ -98,3 +105,4 @@ function UserRegistration() {
 }
 
 export default UserRegistration;
+
