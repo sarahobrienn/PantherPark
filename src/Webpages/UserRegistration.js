@@ -85,9 +85,7 @@ function UserRegistration() {
         </label>
 
         <button onClick={registerUser}>Register User</button>
-
-        {/* Add the new button to go to the specified website */}
-        <button onClick={goToCampusId}>Go to Campus ID</button>
+        <button onClick={goToCampusId}>Create GSU Login</button>
       </div>
 
       <div className="navigation-buttons">
