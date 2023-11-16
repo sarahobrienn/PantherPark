@@ -9,6 +9,7 @@ function ConfirmationPage() {
   const { paymentData } = useContext(PaymentContext);
   // Retrieve parking information from localStorage
   const parkingInfo = JSON.parse(localStorage.getItem('parkingInfo')) || { deck: 'N/A', floor: 'N/A' };
+  const licensePlate = window.licensePlate || "N/A";
 
   return (
     <div className="container">
@@ -26,7 +27,7 @@ function ConfirmationPage() {
         <p>Zip Code: {paymentData.zipCode}</p>
         {/* Add parking information */}
         <p>Parking Deck: {parkingInfo.deck}</p>
-        <p>Parking Floor: {parkingInfo.floor}</p>
+        <p>Plate Number: {licensePlate}</p>
       </div>
       <div className="content">
         <Link to="/user">

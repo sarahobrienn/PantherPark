@@ -40,7 +40,7 @@ function UserPage() {
         <img src="/gsu_logo.png" alt="Georgia State University Logo" width="100" />
         <h1>Panther Park</h1>
       </header>
-      <h2 className="page-title">Welcome, User!</h2>
+      <h2 className="page-title">Welcome, Student!</h2>
       <p>Floor Parked: {parkingInfo.floor}</p>
       <p>Deck Parked: {parkingInfo.deck}</p>
       {parkingInfo.deck !== 'N/A' && (
