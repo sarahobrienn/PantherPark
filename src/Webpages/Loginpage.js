@@ -40,6 +40,9 @@ function LoginPage() {
           onChange={e => setPassword(e.target.value)} 
         />
         <button className="button" onClick={handleLogin}>Login</button>
+        <button className="button" onClick={() => navigate('/user-registration')}>
+          Register New User
+        </button>
       </div>
       <div className="content">
         <button className="button" onClick={() => navigate('/')}>Back to Home</button>
