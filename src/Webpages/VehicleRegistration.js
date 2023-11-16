@@ -4,7 +4,7 @@ import './VehicleRegistration.css';
 
 function VehicleRegistration() {
 
-  const cars = ["N/A", "BMW", "Honda", "Ford", "Toyota", "Chevrolet", "Other"];
+  const cars = ["N/A", "BMW", "Honda", "Ford", "Toyota", "Chevrolet", "Sedan", "Other"];
   const carColors = ["N/A", "Black", "Blue", "Red", "Gray", "White", "Other"];
 
   const [carMake, setCarMake] = useState("N/A");

@@ -1,4 +1,3 @@
-/*The payment page for the user, where they will put CC number, zip code, and other information*/
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PaymentContext from '../PaymentContext';
@@ -11,7 +10,7 @@ function PaymentPage() {
   const [zipCode, setZipCode] = useState('');
 
   const { setPaymentData } = useContext(PaymentContext);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const handlePayment = () => {
     setPaymentData({

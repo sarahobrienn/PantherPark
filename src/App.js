@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './Webpages/Homepage';
 import LoginPage from './Webpages/Loginpage';
 import PaymentPage from './Webpages/Paymentpage';
 import UserPage from './Webpages/Userpage';
 import ConfirmationPage from './Webpages/ConfirmationPage';
-import ParkingDeckPage from './Webpages/ParkingDeckPage'; // Import the ParkingDeckPage
-import ParkingDeckPagePublic from './Webpages/ParkingDeckPagePublic'; // Import the ParkingDeckPagePublic
+import ParkingDeckPage from './Webpages/ParkingDeckPage';
+import ParkingDeckPagePublic from './Webpages/ParkingDeckPagePublic';
 import PaymentContext from './PaymentContext';
 import Notificationpage from './Webpages/Notificationpage';
 import VehicleRegistration from './Webpages/VehicleRegistration';
 import UserpageAdmin from './Webpages/UserpageAdmin';
 import ParkingDeckPageAdmin from './Webpages/ParkingDeckPageAdmin';
 import DataBase from './Webpages/DataBase';
-import {getUsers} from './api/supabase_connection';
+import { getUsers } from './api/supabase_connection';
 
 function App() {
-  const [paymentData, setPaymentData] = React.useState({});
-getUsers() 
+  const [paymentData, setPaymentData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const users = await getUsers();
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchData();
+  }, []); 
 
   return (
     <PaymentContext.Provider value={{ paymentData, setPaymentData }}>
@@ -27,8 +38,8 @@ getUsers()
           <Route path="/login" element={<LoginPage />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/user" element={<UserPage />} />
-          <Route path="/decks" element={<ParkingDeckPage />} /> {/* Route for ParkingDeckPage */}
-          <Route path="/decks-public" element={<ParkingDeckPagePublic />} /> {/* Route for ParkingDeckPagePublic */}
+          <Route path="/decks" element={<ParkingDeckPage />} />
+          <Route path="/decks-public" element={<ParkingDeckPagePublic />} />
           <Route path="/confirmation" element={<ConfirmationPage />} />
           <Route path="/notifications" element={<Notificationpage />} />
           <Route path="/vehicle-registration" element={<VehicleRegistration />} />
