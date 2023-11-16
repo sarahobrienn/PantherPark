@@ -15,19 +15,18 @@ function DataBase() {
 
       <div className="navigation-buttons">
         <div className="content">
-          <Link to="/user">
+          {/* Supabase link button comes first */}
+          <a href="https://supabase.com/dashboard/sign-in?returnTo=%2Fprojects" target="_blank" rel="noopener noreferrer">
+            <button className="button">Go to Supabase</button>
+          </a>
+          
+          {/* Other buttons */}
+          <Link to="/user-admin">
             <button className="button">Back</button>
           </Link>
           <Link to="/">
             <button className="button">Return to Home</button>
           </Link>
-
-          {/* Use the embed tag with Supabase link */}
-          <iframe
-            src="https://supabase.com/dashboard/sign-in?returnTo=%2Fprojects"
-            type="text/html"
-            style={{ width: '100%', height: '600px' }}
-          />
         </div>
       </div>
     </div>
@@ -35,4 +34,6 @@ function DataBase() {
 }
 
 export default DataBase;
+
+
 
