@@ -43,7 +43,7 @@ function Notification() {
         timestamp: new Date().toLocaleTimeString()
       };
       setNotifications(notifs => [newNotification, ...notifs]);
-    }, 30000); // Set the interval to 1 minute
+    }, 3000); // Set the interval to 1 minute
 
     return () => clearInterval(intervalId); 
   }, []);
