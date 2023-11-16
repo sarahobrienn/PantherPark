@@ -9,12 +9,13 @@ function LoginPage() {
   const handleLogin = () => {
     if ((username === 'AdminUser' || username === 'AdminUser2') && password === '12345') {
       navigate('/user-admin');
-    } else if (username === 'sobrien13@student.gsu.edu' || username === 'sha14@student.gsu.edu' || 'zkennedy3@student.gsu.edu' || 'mkhalid2@student.gsu.edu' && password === '12345') {
+    } else if ((username === 'sobrien13@student.gsu.edu' || username === 'sha14@student.gsu.edu' || username === 'zkennedy3@student.gsu.edu' || username === 'mkhalid2@student.gsu.edu') && password === '12345') {
       navigate('/user');
     } else {
       alert('Invalid credentials'); 
     }
   };
+  
 
   return (
     <div className="container">
