@@ -1,25 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate(); 
 
-  const handleLoginStudent = () => {
-    if ((username === 'sobrien13@student.gsu.edu' || username === 'sha14@student.gsu.edu' || username === 'mkhalid2@student.gsu.edu' || username === 'zkennedy3@student.gsu.edu') && password === '12345') {
+  const handleLogin = () => {
+    if ((username === 'AdminUser' || username === 'AdminUser2') && password === '12345') {
+      navigate('/user-admin');
+    } else if (username === 'sobrien13@student.gsu.edu' || username === 'sha14@student.gsu.edu' || 'zkennedy3@student.gsu.edu' || 'mkhalid2@student.gsu.edu' && password === '12345') {
       navigate('/user');
     } else {
-      alert('Invalid student credentials');
-    }
-  };
-  
-
-  const handleLoginAdmin = () => {
-    if (username === 'AdminUser' || username === 'AdminUser2' && password === '12345') {
-      navigate('/user-admin');
-    } else {
-      alert('Invalid admin credentials'); 
+      alert('Invalid credentials'); 
     }
   };
 
@@ -46,14 +39,7 @@ function LoginPage() {
           value={password} 
           onChange={e => setPassword(e.target.value)} 
         />
-        <Link to={{ pathname: "/user", state: { username: username } }}>
-        <Link to="/user">
-          <button className="button">Login Student</button>
-        </Link>
-        <Link to="/user-admin">
-          <button className="button">Login Admin</button>
-        </Link>
-        </Link>
+        <button className="button" onClick={handleLogin}>Login</button>
       </div>
       <div className="content">
         <button className="button" onClick={() => navigate('/')}>Back to Home</button>

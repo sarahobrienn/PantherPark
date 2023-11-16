@@ -13,7 +13,8 @@ import VehicleRegistration from './Webpages/VehicleRegistration';
 import UserpageAdmin from './Webpages/UserpageAdmin';
 import ParkingDeckPageAdmin from './Webpages/ParkingDeckPageAdmin';
 import DataBase from './Webpages/DataBase';
-import {getUsers} from './api/supabase_connection';
+import UserRegistration from './Webpages/UserRegistration'; // Import UserRegistration here
+import { getUsers } from './api/supabase_connection';
 
 function App() {
   const [paymentData, setPaymentData] = useState({});
@@ -28,7 +29,7 @@ function App() {
     };
 
     fetchData();
-  }, []); 
+  }, []);
 
   return (
     <PaymentContext.Provider value={{ paymentData, setPaymentData }}>
